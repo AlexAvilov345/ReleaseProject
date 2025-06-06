@@ -1,0 +1,110 @@
+.product-page {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 10%;
+  margin-left: 20px;
+}
+
+.gallery {
+  flex: 1;
+  margin-right: 20px;
+  background: #F5F5F5;
+  border-radius: 20px;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.thumbnails img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+.info {
+  flex: 1;
+  position: relative;
+}
+
+.price {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.color-picker {
+  margin: 10px 0;
+}
+
+.color-circle {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #333;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.buy-now {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  background: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+    
+}
+.title-name {
+width: 598px;
+height: 61px;
+font-weight: 400;
+font-size: 50px;
+line-height: 61px;
+
+color: #000000;
+
+
+}
+.sizes {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sizes button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sizes button:hover {
+  background: #000;
+  color: #fff;
+}
