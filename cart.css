@@ -1,0 +1,85 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
+  background: #ffffff;
+    scroll-behavior: smooth;
+}
+.cart-main {
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cart-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 16px;
+}
+
+.cart-item img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item-info h2 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.item-info p {
+  margin: 2px 0;
+}
+
+.price {
+  font-weight: 600;
+  color: #222;
+}
+
+.cart-summary {
+  max-width: 800px;
+  margin: 40px auto 0;
+  text-align: right;
+  font-size: 18px;
+}
+
+.total-price {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.checkout-btn {
+  display: inline-block;
+  margin-top: 16px;
+  background-color: black;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #333;
+}

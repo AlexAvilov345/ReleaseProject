@@ -22,17 +22,33 @@
     <nav>
       <a href="#clothes1">Взуття</a>
       <a href="#clothes2">Одяг</a>
-      <a href="#">Про нас</a>
+      <a href="#">Про нас</a> 
     </nav>
   </div>
   <div class="header-icons">
     <button class="icons"><img src="img/free-icon-magnifier-2319177 1.svg" alt=""></button>
     <button class="icons"><img src="img/Vector.svg" alt=""></button>
-    <button class="icons"><img src="img/free-icon-shopping-bag-2956820 (1) 1.svg" alt=""></button>
+     <div class="cart-container" onclick="goToCart()">
+        
+            <button class="cart-btn" id="cartBtn">
+                Кошик
+                <svg xmlns="http://www.w3.org/2000/svg" class="bell" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M17 17h-11v-14h-2" />
+                  <path d="M6 5l14 1l-1 7h-13" />
+                </svg>
+                <span class="cart-counter">0</span>
+                </li>
+              </button>
+        </div>
   </div>
 </header>
-
-<section class="background">
+  <main class="main">
+    <section class="background">
   <div class="hero">
     <div class="hero-text">
       <h1 class="title">Оригінальний брендовий одяг</h1>
@@ -40,15 +56,14 @@
       <p class="hero-subtext">Оригінальна якість та актуальні колекції</p>
       <p class="hero-subtext">Ціни, що приємно дивують</p>
       <div class="gomore-button">
-      <button class="group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-rose-300 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500 underline underline-offset-2 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur hover:underline hover:underline-offset-4  origin-left hover:decoration-2 hover:text-rose-300 relative bg-neutral-800 h-16 w-64 border text-left p-3 text-gray-50 text-base font-bold rounded-lg  overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-violet-500 before:rounded-full before:blur-lg  after:absolute after:z-10 after:w-20 after:h-20 after:content['']  after:bg-rose-300 after:right-8 after:top-3 after:rounded-full after:blur-lg">
-  Let's go
-</button>
+      <a href="#clothes1"><button class="group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-rose-300 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500 underline underline-offset-2 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur hover:underline hover:underline-offset-4  origin-left hover:decoration-2 hover:text-rose-300 relative bg-neutral-800 h-16 w-64 border text-left p-3 text-gray-50 text-base font-bold rounded-lg  overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-violet-500 before:rounded-full before:blur-lg  after:absolute after:z-10 after:w-20 after:h-20 after:content['']  after:bg-rose-300 after:right-8 after:top-3 after:rounded-full after:blur-lg"> 
+  Let's go 
+</button></a>
 </div>
 
     </div>
   </div>
 </section>
-  <main>
       <div class="section-divider"></div>
   <section class="products-section" id="clothes1">
       <div class="section-header2">
@@ -57,15 +72,40 @@
       </div>
   <div class="product-grid">
     <div class="product-card">
+      <button data-cart href="" class="cssbuttons-io-button">
+  <svg
+    height="24"
+    width="24"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
+  </svg>
+  <span>Add</span>
+</button>
+
        <button class="favorite"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22.7208 2.64842C21.3954 1.15049 19.6385 0.236237 17.7674 0.070812C15.8964 -0.0946127 14.0345 0.499695 12.5182 1.74638C10.9273 0.412553 8.94726 -0.19227 6.97667 0.0537119C5.00608 0.299694 3.19135 1.37821 1.89794 3.07207C0.60453 4.76593 -0.0714974 6.94932 0.00599578 9.18255C0.083489 11.4158 0.908746 13.533 2.31558 15.1078L10.0801 23.8744C10.7302 24.5957 11.6059 25 12.5182 25C13.4304 25 14.3061 24.5957 14.9563 23.8744L22.7208 15.1078C24.1806 13.4521 25 11.2125 25 8.87809C25 6.54369 24.1806 4.30412 22.7208 2.64842ZM20.9578 13.1628L13.1933 21.9153C13.105 22.0159 12.9998 22.0957 12.8839 22.1502C12.7681 22.2047 12.6437 22.2327 12.5182 22.2327C12.3926 22.2327 12.2683 22.2047 12.1524 22.1502C12.0365 22.0957 11.9314 22.0159 11.843 21.9153L4.07853 13.1205C3.09798 11.9906 2.5489 10.4728 2.5489 8.89219C2.5489 7.31156 3.09798 5.79378 4.07853 4.6639C5.07773 3.55184 6.42534 2.92829 7.82948 2.92829C9.23362 2.92829 10.5812 3.55184 11.5804 4.6639C11.6967 4.796 11.835 4.90086 11.9873 4.97241C12.1397 5.04397 12.3031 5.08081 12.4682 5.08081C12.6332 5.08081 12.7966 5.04397 12.949 4.97241C13.1014 4.90086 13.2397 4.796 13.3559 4.6639C14.3551 3.55184 15.7027 2.92829 17.1068 2.92829C18.511 2.92829 19.8586 3.55184 20.8578 4.6639C21.8518 5.77897 22.4189 7.28852 22.4376 8.86919C22.4563 10.4499 21.9251 11.9759 20.9578 13.1205V13.1628Z" fill="#BEBEBE"/>
 </svg>
 </button>
-      <a href="item-1.html"><img src="img-items/Снимок экрана 2025-05-30 150022.png" alt="Nike Air Force 1" class="product-img" /></a>
+      <img src="img-items/Снимок экрана 2025-05-30 150022.png" alt="Nike Air Force 1" class="product-img" />
       <p class="product-name">Кросівки <strong>Nike Air Force 1</strong></p>
       <p class="product-price">115$</p>
     </div>
     <div class="product-card">
+      <button class="cssbuttons-io-button">
+  <svg
+    height="24"
+    width="24"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
+  </svg>
+  <span>Add</span>
+</button>
        <button class="favorite">
         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22.7208 2.64842C21.3954 1.15049 19.6385 0.236237 17.7674 0.070812C15.8964 -0.0946127 14.0345 0.499695 12.5182 1.74638C10.9273 0.412553 8.94726 -0.19227 6.97667 0.0537119C5.00608 0.299694 3.19135 1.37821 1.89794 3.07207C0.60453 4.76593 -0.0714974 6.94932 0.00599578 9.18255C0.083489 11.4158 0.908746 13.533 2.31558 15.1078L10.0801 23.8744C10.7302 24.5957 11.6059 25 12.5182 25C13.4304 25 14.3061 24.5957 14.9563 23.8744L22.7208 15.1078C24.1806 13.4521 25 11.2125 25 8.87809C25 6.54369 24.1806 4.30412 22.7208 2.64842ZM20.9578 13.1628L13.1933 21.9153C13.105 22.0159 12.9998 22.0957 12.8839 22.1502C12.7681 22.2047 12.6437 22.2327 12.5182 22.2327C12.3926 22.2327 12.2683 22.2047 12.1524 22.1502C12.0365 22.0957 11.9314 22.0159 11.843 21.9153L4.07853 13.1205C3.09798 11.9906 2.5489 10.4728 2.5489 8.89219C2.5489 7.31156 3.09798 5.79378 4.07853 4.6639C5.07773 3.55184 6.42534 2.92829 7.82948 2.92829C9.23362 2.92829 10.5812 3.55184 11.5804 4.6639C11.6967 4.796 11.835 4.90086 11.9873 4.97241C12.1397 5.04397 12.3031 5.08081 12.4682 5.08081C12.6332 5.08081 12.7966 5.04397 12.949 4.97241C13.1014 4.90086 13.2397 4.796 13.3559 4.6639C14.3551 3.55184 15.7027 2.92829 17.1068 2.92829C18.511 2.92829 19.8586 3.55184 20.8578 4.6639C21.8518 5.77897 22.4189 7.28852 22.4376 8.86919C22.4563 10.4499 21.9251 11.9759 20.9578 13.1205V13.1628Z" fill="#BEBEBE"/>
@@ -76,6 +116,18 @@
       <p class="product-price">60$</p>
     </div>
     <div class="product-card">
+      <button class="cssbuttons-io-button">
+  <svg
+    height="24"
+    width="24"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
+  </svg>
+  <span>Add</span>
+</button>
        <button class="favorite">
         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22.7208 2.64842C21.3954 1.15049 19.6385 0.236237 17.7674 0.070812C15.8964 -0.0946127 14.0345 0.499695 12.5182 1.74638C10.9273 0.412553 8.94726 -0.19227 6.97667 0.0537119C5.00608 0.299694 3.19135 1.37821 1.89794 3.07207C0.60453 4.76593 -0.0714974 6.94932 0.00599578 9.18255C0.083489 11.4158 0.908746 13.533 2.31558 15.1078L10.0801 23.8744C10.7302 24.5957 11.6059 25 12.5182 25C13.4304 25 14.3061 24.5957 14.9563 23.8744L22.7208 15.1078C24.1806 13.4521 25 11.2125 25 8.87809C25 6.54369 24.1806 4.30412 22.7208 2.64842ZM20.9578 13.1628L13.1933 21.9153C13.105 22.0159 12.9998 22.0957 12.8839 22.1502C12.7681 22.2047 12.6437 22.2327 12.5182 22.2327C12.3926 22.2327 12.2683 22.2047 12.1524 22.1502C12.0365 22.0957 11.9314 22.0159 11.843 21.9153L4.07853 13.1205C3.09798 11.9906 2.5489 10.4728 2.5489 8.89219C2.5489 7.31156 3.09798 5.79378 4.07853 4.6639C5.07773 3.55184 6.42534 2.92829 7.82948 2.92829C9.23362 2.92829 10.5812 3.55184 11.5804 4.6639C11.6967 4.796 11.835 4.90086 11.9873 4.97241C12.1397 5.04397 12.3031 5.08081 12.4682 5.08081C12.6332 5.08081 12.7966 5.04397 12.949 4.97241C13.1014 4.90086 13.2397 4.796 13.3559 4.6639C14.3551 3.55184 15.7027 2.92829 17.1068 2.92829C18.511 2.92829 19.8586 3.55184 20.8578 4.6639C21.8518 5.77897 22.4189 7.28852 22.4376 8.86919C22.4563 10.4499 21.9251 11.9759 20.9578 13.1205V13.1628Z" fill="#BEBEBE"/>
@@ -86,6 +138,18 @@
       <p class="product-price">65$</p>
     </div>
     <div class="product-card">
+      <button class="cssbuttons-io-button">
+  <svg
+    height="24"
+    width="24"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
+  </svg>
+  <span>Add</span>
+</button>
       <button class="favorite">
         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22.7208 2.64842C21.3954 1.15049 19.6385 0.236237 17.7674 0.070812C15.8964 -0.0946127 14.0345 0.499695 12.5182 1.74638C10.9273 0.412553 8.94726 -0.19227 6.97667 0.0537119C5.00608 0.299694 3.19135 1.37821 1.89794 3.07207C0.60453 4.76593 -0.0714974 6.94932 0.00599578 9.18255C0.083489 11.4158 0.908746 13.533 2.31558 15.1078L10.0801 23.8744C10.7302 24.5957 11.6059 25 12.5182 25C13.4304 25 14.3061 24.5957 14.9563 23.8744L22.7208 15.1078C24.1806 13.4521 25 11.2125 25 8.87809C25 6.54369 24.1806 4.30412 22.7208 2.64842ZM20.9578 13.1628L13.1933 21.9153C13.105 22.0159 12.9998 22.0957 12.8839 22.1502C12.7681 22.2047 12.6437 22.2327 12.5182 22.2327C12.3926 22.2327 12.2683 22.2047 12.1524 22.1502C12.0365 22.0957 11.9314 22.0159 11.843 21.9153L4.07853 13.1205C3.09798 11.9906 2.5489 10.4728 2.5489 8.89219C2.5489 7.31156 3.09798 5.79378 4.07853 4.6639C5.07773 3.55184 6.42534 2.92829 7.82948 2.92829C9.23362 2.92829 10.5812 3.55184 11.5804 4.6639C11.6967 4.796 11.835 4.90086 11.9873 4.97241C12.1397 5.04397 12.3031 5.08081 12.4682 5.08081C12.6332 5.08081 12.7966 5.04397 12.949 4.97241C13.1014 4.90086 13.2397 4.796 13.3559 4.6639C14.3551 3.55184 15.7027 2.92829 17.1068 2.92829C18.511 2.92829 19.8586 3.55184 20.8578 4.6639C21.8518 5.77897 22.4189 7.28852 22.4376 8.86919C22.4563 10.4499 21.9251 11.9759 20.9578 13.1205V13.1628Z" fill="#BEBEBE"/>
@@ -192,6 +256,7 @@
   </div>
 </footer>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
   
 </body>
 </html>
