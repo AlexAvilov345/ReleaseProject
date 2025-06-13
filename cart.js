@@ -1,23 +1,26 @@
-let container_card = document.querySelector(".container-card")
+let container_card = document.querySelector(".container-card");
 
-cart = JSON.parse(localStorage.getItem("cart")) || [] 
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-cart.forEach(card => {
-  let cardHTML = `
-  <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="${card.img}" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">${card.title}</h5>
-        <p class="card-text">${card.desc}</p>
-        <p class="card-text"><small class="text-muted">${card.price}</small></p>
+if (cart.length === 0) {
+  container_card.innerHTML = `<p class="empty-cart-message">Кошик порожній</p>`;
+} else {
+  cart.forEach(card => {
+    let cardHTML = `
+      <div class="cart-card">
+        <img src="${card.img}" alt="${card.title}" class="cart-card-img" />
+        <div class="cart-card-info">
+          <h2 class="cart-card-title">${card.title}</h2>
+          <p class="cart-card-desc">${card.desc}</p>
+          <p class="cart-card-price">${card.price}</p>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-`
-container_card.insertAdjacentHTML("beforeend", cardHTML);
+    `;
+    container_card.insertAdjacentHTML("beforeend", cardHTML);
+  });
+}
+document.querySelector(".clear-cart-btn").addEventListener("click", () => {
+  localStorage.removeItem("cart");
+  location.reload(); 
 });
+

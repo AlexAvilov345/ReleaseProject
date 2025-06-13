@@ -1,97 +1,64 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Кошик – StyleNest</title>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StyleNest</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jacquard+24&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="cart.css"/>
 </head>
 <body class="body">
   <div class="main-div">
-    <header class="header">
-      <div class="header-left">
-        <div class="logo"><a href="./index.html">StyleNest</a></div>
-        <nav>
-          <a href="clothes1">Взуття</a>
-          <a href="clothes2">Одяг</a>
-          <a href="#">Про нас</a>
-        </nav>
-      </div>
-      <div class="header-icons">
-        <button class="icons"><img src="img/free-icon-magnifier-2319177 1.svg" alt=""></button>
-        <button class="icons"><img src="img/Vector.svg" alt=""></button>
-        <div class="cart-container">
-          <button class="cart-btn selected">
-            Кошик
-            <svg xmlns="http://www.w3.org/2000/svg" class="bell" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-              <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>
-              <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>
-              <path d="M17 17h-11v-14h-2"/>
-              <path d="M6 5l14 1l-1 7h-13"/>
-            </svg>
-            <span class="cart-counter">2</span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main class="cart-main">
-      <h1 class="cart-title">Ваш кошик</h1>
-
-      <div class="cart-items">
-        <div class="cart-item">
-          <img src="img/product1.jpg" alt="Товар 1">
-          <div class="item-info">
-            <h2>Светр Oversize</h2>
-            <p>Розмір: M</p>
-            <p class="price">₴1200</p>
-          </div>
-        </div>
-
-        <div class="cart-item">
-          <img src="img/product2.jpg" alt="Товар 2">
-          <div class="item-info">
-            <h2>Кросівки Urban</h2>
-            <p>Розмір: 42</p>
-            <p class="price">₴2300</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="cart-summary">
-        <p>Разом: <span class="total-price">₴3500</span></p>
-        <a href="#" class="checkout-btn">Оформити замовлення</a>
-      </div>
-    </main>
-  </div>
-  <div class="section-divider3"></div>
-  <footer class="footer">
-  <div class="footer-logo">StyleNest</div>
-
- <div class="social-icons">
-      <img src="img/images-removebg-preview.png" alt="Instagram">
-      <img src="img/Vector (1).svg" alt="tg" >
-      <img src="img/twitter-new-2023-x-logo-white-background-vector_1017-45422-removebg-preview 1.svg" alt="x">
+     <header class="header">
+  <div class="header-left">
+    <nav>
+      <a href="#clothes1">Взуття</a>
+      <a href="#clothes2">Одяг</a>
+      <a href="#">Про нас</a> 
+    </nav>
+    <div class="logo" >
+      <a href="./index.html">StyleNest</a>
     </div>
-  <div class="footer-menu">
-    <a href="#">Одяг</a>
-    <a href="#">Взуття</a>
-    <a href="#">Про нас</a>
   </div>
+  <div class="header-icons">
+    <button class="icons"><img src="img/free-icon-magnifier-2319177 1.svg" alt=""></button>
+    <button class="icons"><img src="img/Vector.svg" alt=""></button>
+     <div class="cart-container" onclick="goToCart()">
+        
+            <button class="cart-btn" id="cartBtn">
+                Кошик
+                <svg xmlns="http://www.w3.org/2000/svg" class="bell" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M17 17h-11v-14h-2" />
+                  <path d="M6 5l14 1l-1 7h-13" />
+                </svg>
+                <span class="cart-counter">0</span>
+                </li>
+              </button>
+        </div>
+  </div>
+</header>
 
-  <div class="footer-bottom">
-    <span>stylenest@gmail.com</span>
-    <span>© 2025 StyleNest, Inc. All rights reserved</span>
-    <span>+380 (000) 00-00-0</span>
-  </div>
-</footer>
+     <main class="main">
+      <div class = "container-card">
+        <button class="clear-cart-btn">Очистити кошик</button>
+
+          
+      </div>
+
+    </main>
+ <script src="/script.js"></script>
+      <script src="/cart.js"></script>
 </body>
 </html>
 
