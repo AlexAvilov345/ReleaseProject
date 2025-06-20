@@ -7,16 +7,9 @@ html, body {
   height: 100%;
   background: #ffffff;
   scroll-behavior: smooth;
-  
-}
-.background {
-  background: url(img/image.png) no-repeat center / cover;
-  position: relative;
-  height: 70vh;
 }
 body {
   font-family: sans-serif; 
-  
 } 
 .header {
   width: 100%;
@@ -28,7 +21,10 @@ body {
   justify-content: space-between;
   align-items: center; 
 }
- 
+
+.header.hidden {
+  transform: translateY(-100%);
+}
 
 .header-left {
   display: flex;
@@ -122,7 +118,6 @@ nav a {
   }
 }
 
-
 .icons {
   background: none;      
   border: none;     
@@ -130,29 +125,108 @@ nav a {
   cursor: pointer;        
 }
 .hero-text {
-  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 25%;
+  left: 2%;
+  transform: translateY(-30%);
+  color: black;
+}
+.container {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.title {
-  font-size: 70px;
-  font-weight: 800; 
-  margin-bottom: 40px;
-  margin-bottom: 5%;
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  height: 100vh;
+  overflow-y: auto;
 }
 
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
 
+.categories ul,
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
+.categories li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #333;
+}
+
+.dropdown-toggle {
+  font-weight: bold;
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  padding-left: 15px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.filters {
+  margin-top: 30px;
+}
+
+.filter {
+  margin-bottom: 20px;
+}
+
+.filter label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.filter input[type="range"] {
+  width: 100%;
+}
+
+.filter input[type="text"] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filter input[type="checkbox"] {
+  margin-right: 5px;
+}
+.container {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+}
 .products-section {
   background-color: #ffffff;
   padding-top: 6%;
 }
 
-
 .section-title {
   font-size: 60px;
   margin-bottom: 60px;
   margin-left: 100px;
-
   font-family: "Martian Mono", monospace;
 }
 
@@ -162,30 +236,22 @@ nav a {
   justify-content: center;
   gap: 30px;
   margin-bottom: 60px;  
-  
 }
 
-
 .product-card {
-box-sizing: border-box;
-
-padding: 20px;
+  box-sizing: border-box;
+  padding: 20px;
   width: 351px;
   height: 381px;
   display: flex;
   flex-direction: column;
   align-items: center;
-background: #EFEFEF;
-border: 1px solid rgba(0, 0, 0, 0.22);
-border-radius: 20px;
-position: relative;
+  background: #EFEFEF;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  border-radius: 20px;
+  position: relative;
+}
 
-}
-.product-desc {
-  text-align: center;
-  padding: 10px;
-}
-  
 .product-img {
   height: auto;
   cursor: pointer;  
@@ -194,126 +260,19 @@ position: relative;
 .product-name { 
   text-align: center;
   font-size: 20px;
-} 
- 
-.product-price {
-    text-align: center;
-  font-weight: 700;
-    font-size: 20px;
-}
-.products-section2 {
-  padding-bottom: 60px;
-  background-color: #ffffff;
 }
 
-
-.products-grid2 {
-  display: flex;
-  justify-content: center; 
-  gap: 40px;                      
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.product-card2 {
-  background-color: #fff;
-  width: 490px;
-  min-height: 330px;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.section-divider {
- /* Rectangle 3 */
-
-position: absolute;
-width: 100%;
-height: 50px;
-
-background: #ffffff;
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.62);
-border-radius: 30px 30px 0px 0px;
-
-}
-
-
-
-.section-divider3{
-position: absolute;
-width: 100%;
-height: 0px;
-
-border: 1px solid #000000;
-
-
-}
-.section-header2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.viewMore {
-  background-color: #f0f0f0;
-  border: 1px solid #000;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-width: 156px;
-height: 64px;
-border-radius: 100px;
-  margin-bottom: 60px;
-  margin-right: 30px;
-
-}
-.img9 {
-  border-radius: 5px;
-}
-.favorite {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1;
-}
-
-
-
-.footer {
-  background-color: #f0f0f0;
-  padding: 30px ;
+.product-desc {
   text-align: center;
-  color: #000;
+  padding: 10px;
 }
 
-.footer-logo {
-  font-size: 50px;
-  font-family: "Anton SC", sans-serif;
+.product-price {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
 
-}
-.footer-bottom {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  font-size: 16px;
-  margin-top: 30px;
-  color: #000000;
-}
-.social-icons {
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px; 
-}
-  
-.social-icons img {
-    width: 52px;
-    height: 52px;
-} 
 .cssbuttons-io-button {
   position: absolute;
   top: 15px;
@@ -330,30 +289,31 @@ border-radius: 100px;
   border: none;
   letter-spacing: 0.05em;
   border-radius: 20em;
-   z-index: 1;
+  z-index: 1;
 }
 
 .cssbuttons-io-button svg {
   margin-right: 6px;
 }
+
 .cssbuttons-io-button:hover {
   box-shadow: 0 0.5em 1.5em -0.5em #00000098;
 }
 
 .cssbuttons-io-button:active {
   box-shadow: 0 0.3em 1em -0.5em #00000098;
-} 
+}
+
+.favorite {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
- 
