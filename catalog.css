@@ -12,48 +12,73 @@ body {
   font-family: sans-serif; 
 } 
 .header {
-  width: 100%;
+ width: 100%;
   z-index: 1000;
-  background-color: #EBEBEB;
-  border-bottom: 1px solid #000;
+  background: linear-gradient(135deg, #ffffff, #f1f1f1);
   color: #000000;
-    display: flex; 
+  display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 2rem;
+  position: sticky;
+  top: 0;
 }
 
-.header.hidden {
-  transform: translateY(-100%);
-}
+
 
 .header-left {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
 .logo {
-  font-size: 50px;
-  font-family: "Anton SC", sans-serif; 
-  text-align: center; 
-  margin-left: 500px;
+  font-size: 36px;
+  font-family: "Anton SC", sans-serif;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
 }
 
 nav {
   display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-nav a { 
-  gap: 10px;
+nav a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  margin-left: 50px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease-in-out;
 }
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #333;
+  transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
 .header-icons {
   display: flex;
-  gap: 10px;
   align-items: center;
-  color: #000000;
+  gap: 15px;
 }
 .cart-btn {
   position: relative;
@@ -240,7 +265,6 @@ nav a {
 
 .product-card {
   box-sizing: border-box;
-  padding: 20px;
   width: 351px;
   height: 381px;
   display: flex;
@@ -253,7 +277,7 @@ nav a {
 }
 
 .product-img {
-  height: auto;
+  height: 200px;
   cursor: pointer;  
 }
 
@@ -264,7 +288,6 @@ nav a {
 
 .product-desc {
   text-align: center;
-  padding: 10px;
 }
 
 .product-price {
