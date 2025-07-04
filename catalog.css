@@ -156,96 +156,8 @@ nav a:hover::after {
   transform: translateY(-30%);
   color: black;
 }
-.container {
-  display: flex;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.sidebar {
-  width: 250px;
-  background-color: #ffffff;
-  padding: 20px;
-  border-right: 1px solid #ddd;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-.sidebar h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.categories ul,
-.dropdown-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.categories li {
-  margin-bottom: 8px;
-  cursor: pointer;
-  color: #333;
-}
-
-.dropdown-toggle {
-  font-weight: bold;
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  padding-left: 15px;
-  margin-top: 5px;
-  font-size: 14px;
-  color: #555;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.filters {
-  margin-top: 30px;
-}
-
-.filter {
-  margin-bottom: 20px;
-}
-
-.filter label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-
-.filter input[type="range"] {
-  width: 100%;
-}
-
-.filter input[type="text"] {
-  width: 100%;
-  padding: 6px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.filter input[type="checkbox"] {
-  margin-right: 5px;
-}
-.container {
-  display: flex;
-}
-
-.content {
-  flex: 1;
-  padding: 40px;
-}
 .products-section {
   background-color: #ffffff;
-  padding-top: 6%;
 }
 
 .section-title {
@@ -279,7 +191,9 @@ nav a:hover::after {
 .product-img {
   height: 200px;
   cursor: pointer;  
+  border-radius: 10px;
 }
+
 
 .product-name { 
   text-align: center;
@@ -336,6 +250,64 @@ nav a:hover::after {
   cursor: pointer;
   z-index: 1;
 }
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.filter-bar label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.filter-bar select {
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filter-bar select:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.main-catalog {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
 
 
 
