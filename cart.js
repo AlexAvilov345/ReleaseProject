@@ -79,3 +79,45 @@ document.querySelector(".clear-cart-btn").addEventListener("click", () => {
   location.reload(); 
 });
 
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const container_card = document.querySelector(".container-card");
+  const cart_counterHTML = document.querySelector(".cart-counter");
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  if (cart.length > 0) {
+    const buyBtn = document.createElement("button");
+    buyBtn.textContent = "Купити";
+    buyBtn.classList.add("buy-btn");
+    container_card.appendChild(buyBtn);
+
+    const modal = document.getElementById("thanksModal");
+    const closeModal = modal.querySelector(".modal-close");
+
+    buyBtn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+
+      localStorage.removeItem("cart");
+      localStorage.removeItem("counter");
+      container_card.innerHTML = `<p class="empty-cart-message">Кошик порожній</p>`;
+      if (cart_counterHTML) cart_counterHTML.textContent = 0;
+    });
+  }
+});
+
+
+
+
+
+
+
+
+
+

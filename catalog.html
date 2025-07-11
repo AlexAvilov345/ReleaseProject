@@ -26,7 +26,15 @@
     </div>
   </div>
   <div class="header-icons">
-    <button class="icons"><img src="img/free-icon-magnifier-2319177 1.svg" alt=""></button>
+    <div class="container2">
+        <input checked="" class="checkbox" type="checkbox" id="searchInput"> 
+        <div class="mainbox">
+            <div class="iconContainer">
+                <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="search_icon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+            </div>
+         <input class="search_input" placeholder="search" type="text">
+        </div>
+    </div>
     <button class="icons"><img src="img/Vector.svg" alt=""></button>
      <div class="cart-container" onclick="goToCart()">
         
@@ -244,6 +252,7 @@
   <p class="product-price">75$</p>
 </div>
   </div>
+ 
 
 
   
@@ -251,10 +260,46 @@
         </div>
         
       </section>
+      
       </div>
 
     </main>
 
     <script src="script.js"></script>
+    <script src="catalog.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const query = searchParams.get("search")?.toLowerCase().trim() || "";
+
+    const searchInput = document.querySelector(".search_input");
+    if (searchInput) {
+      searchInput.value = query;
+    }
+
+    const products = document.querySelectorAll(".product-card");
+
+    const filterProducts = (term) => {
+      products.forEach((card) => {
+        const nameText = card.querySelector(".product-name")?.textContent.toLowerCase();
+        if (nameText.includes(term)) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    };
+
+    if (query) {
+      filterProducts(query);
+    }
+
+
+    searchInput.addEventListener("input", (e) => {
+      filterProducts(e.target.value.toLowerCase().trim());
+    });
+  });
+</script>
+
 </body>
 </html>
